@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "MiniTwitter"
+  "defaultProject": "MiniTwitter",
+  "cli": {
+    "analytics": false
+  }
 }
