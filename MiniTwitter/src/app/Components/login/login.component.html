@@ -1,8 +1,8 @@
 <div class="login">
   <form class="custom-form" method="post">
     <h1>Iniciar sesión</h1>
-    <input type="email" [(ngModel)]="email" name="email" placeholder="Email" required="required">
-    <input type="password" [(ngModel)]="password" name="password" placeholder="Contraseña" required="required">
+    <input type="email" [(ngModel)]="usuario.email" #em="ngModel" name="email" placeholder="Email" [email]="true" required="required"/>
+    <input type="password" [(ngModel)]="usuario.password" #pwd="ngModel" name="password" placeholder="Contraseña" required="required">
     <button type="submit" (click)="login()">Log in</button>
   </form>
 </div>

@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginDto } from 'src/app/dto/login.dto';
+import { UsuarioService } from 'src/app/Services/usuario.service';
+import { Router } from '@angular/router';
+import { SingUpDto } from 'src/app/dto/signUp.dto';
 
 @Component({
   selector: 'app-registro',
@@ -7,18 +11,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistroComponent implements OnInit {
 
-  email:string;
-  password:string;
-  confirmarPassword:string;
+  //email:string;
+  //password:string;
+  registrarUsuario: SingUpDto;
+  //confirmarPassword:string;
+  //usuario: LoginDto;
 
-  constructor() { }
+  constructor(private servicioUsuario: UsuarioService, private router: Router) {
+    this.registrarUsuario = new SingUpDto('','','','UDEMYANDROID');
+  }
 
   ngOnInit(): void {
   }
 
   registrar(){
-    console.log(this.email);
-    console.log(this.password);
+    //const usuario = {}
+    this.servicioUsuario.registro(this.registrarUsuario).subscribe(
+      data => {
+        localStorage.setItem('token', data.code);
+        this.servicioUsuario.setToken(data.code);
+        this.router.navigateByUrl('/');
+      }, error => {
+        console.log(error);
+      }
+    );
   }
 
 }
