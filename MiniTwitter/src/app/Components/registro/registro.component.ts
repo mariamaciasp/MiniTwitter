@@ -30,7 +30,7 @@ export class RegistroComponent implements OnInit {
       data => {
         localStorage.setItem('token', data.code);
         this.servicioUsuario.setToken(data.code);
-        this.router.navigateByUrl('/');
+        this.router.navigateByUrl('/login');
       }, error => {
         console.log(error);
       }
