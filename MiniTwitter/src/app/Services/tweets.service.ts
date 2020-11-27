@@ -2,6 +2,9 @@ import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Observable } from 'rxjs';
 import { ListaTweets } from '../Models/listaTweets-response.interface';
+import { NONE_TYPE } from '@angular/compiler';
+import { TweetDto } from '../dto/tweet.dto';
+import { Like } from '../Models/like-response.interface';
 
 /*import { from, Observable } from "rxjs";
 import { ListaTweets } from '../models/listaTweets-response.interface';
@@ -33,6 +36,14 @@ export class TweetsService {
     );
   }
 
+  darLike(id: number): Observable<ListaTweets>{
+    const authURL = 'https://www.minitwitter.com:3001/apiv1/tweets/like/'+id;
+    return this.http.post<ListaTweets>(
+      authURL,
+      null, //NONE_TYPE
+      httpOptions
+    );
+  }
 
   /*registro(usuarioRegistro: SingUpDto): Observable<SignUpResponse> {
     const authURLRegistro = 'https://www.minitwitter.com:3001/apiv1/auth/signup';
