@@ -18,6 +18,7 @@ export class ListaTweetsComponent implements OnInit {
 
   ngOnInit(): void {
     this.listarTweets();
+
   }
 
   listarTweets(){
@@ -32,5 +33,18 @@ export class ListaTweetsComponent implements OnInit {
     });*/
       //(listaTweets: ListaTweets) => (this.tweets = listaTweets));
   }
+
+  /*cantidadLikesTweet(){
+    let contarLikes = this.tweets.likes.length;
+    /*for(let i = 0; i < this.tweets.likes.length; i++){
+      this.tweets.likes.length;
+      if(this.tweets.likes[i]!=null){
+        contarLikes++;
+      }
+    }*/
+    //return contarLikes;
+
+  //}
+
 
 }

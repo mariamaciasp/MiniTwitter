@@ -6,6 +6,7 @@
     <mat-card-title><div><!-- <img mat-card-image src={{tweet.user.photoUrl}}>-->
       {{tweet.user.username}}</div></mat-card-title>
     <mat-card-subtitle>{{tweet.likes}}</mat-card-subtitle>
+    <div></div>
     <mat-card-subtitle></mat-card-subtitle>
   </mat-card-header>
 
@@ -14,7 +15,7 @@
     </p>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-button>LIKE</button>
+    <button mat-button >{{tweet.likes.length}}</button>
     <button mat-button>SHARE</button>
   </mat-card-actions>
 </mat-card>

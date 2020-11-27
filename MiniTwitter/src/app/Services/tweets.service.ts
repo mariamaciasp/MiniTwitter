@@ -33,6 +33,7 @@ export class TweetsService {
     );
   }
 
+
   /*registro(usuarioRegistro: SingUpDto): Observable<SignUpResponse> {
     const authURLRegistro = 'https://www.minitwitter.com:3001/apiv1/auth/signup';
     return this.http.post<SignUpResponse>(
