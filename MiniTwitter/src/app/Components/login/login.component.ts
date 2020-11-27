@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
     this.servicioUsuario.login(this.usuario).subscribe(data => {
       localStorage.setItem('token', data.token); // a saber para qué es esto
       this.servicioUsuario.setToken(data.token);
-      this.router.navigateByUrl('/');
+      this.router.navigateByUrl('/tweets');
       console.log(data.token);
     });
     //console.log(this.email);
