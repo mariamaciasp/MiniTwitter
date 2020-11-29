@@ -13,9 +13,10 @@
   <mat-card-content>
     <p> {{tweet.mensaje}}
     </p>
+    <p>{{tweet.likes.length}}</p>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-button (click)="darLike(tweet.id)">{{tweet.likes.length}}
+    <button mat-button (click)="darLike(tweet.id)">
       {{tweet.id}} {{tweet.user.id}}</button>
     <button mat-button>SHARE</button>
   </mat-card-actions>
