@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges} from '@angular/core';
 import { TweetsService } from '../../Services/tweets.service';
 import { ListaTweets } from '../../Models/listaTweets-response.interface'
 import { Router } from '@angular/router';
@@ -17,8 +17,21 @@ export class ListaTweetsComponent implements OnInit {
   tweets: ListaTweets;
 
   ngOnInit(): void {
+    this.tweets;
     this.listarTweets();
 
+  }
+
+  ngOnChanges(changes: any):void{
+    this.listarTweets;
+  }
+
+  darLike(id: number) {
+    this.servicioTweets.darLike(id).subscribe(resp => {
+      console.log(resp);
+    });;
+    //this.tweets.likes.push();
+    console.log("marcado favorito");
   }
 
   listarTweets(){
