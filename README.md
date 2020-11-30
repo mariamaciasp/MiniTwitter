@@ -4,7 +4,9 @@ El proyecto como su nombre indica es una versión pequeña de Twitter. Con él p
 
 ## Mi cuenta de usuario
 Email: mmacpad@mail.com
+
 Usuario: mmacpad
+
 Contraseña: 1234
 
 
