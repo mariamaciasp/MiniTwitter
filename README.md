@@ -10,4 +10,4 @@ Usuario: mmacpad
 Contraseña: 1234
 
 
-Para iniciar ejecutar el proyecto lo haremos con el comando "ng serve -o"
+- Para iniciar ejecutar el proyecto lo haremos con el comando "ng serve -o"
