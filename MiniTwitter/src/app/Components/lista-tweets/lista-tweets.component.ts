@@ -2,7 +2,7 @@ import { Component, OnInit, OnChanges} from '@angular/core';
 import { TweetsService } from '../../Services/tweets.service';
 import { ListaTweets } from '../../Models/listaTweets-response.interface'
 import { Router } from '@angular/router';
-import { ThisReceiver } from '@angular/compiler';
+
 
 @Component({
   selector: 'app-lista-tweets',
@@ -24,6 +24,7 @@ export class ListaTweetsComponent implements OnInit {
 
   ngOnChanges(changes: any):void{
     this.listarTweets;
+    this.tweets;
   }
 
   darLike(id: number) {
@@ -35,7 +36,7 @@ export class ListaTweetsComponent implements OnInit {
   }
 
   listarTweets(){
-    this.servicioTweets.getTweets().subscribe((listaTweets: ListaTweets) => (this.tweets = listaTweets))
+    this.servicioTweets.getTweets().subscribe((listaTweets: ListaTweets) => (this.tweets = listaTweets));
 
     /*})
 
@@ -46,18 +47,6 @@ export class ListaTweetsComponent implements OnInit {
     });*/
       //(listaTweets: ListaTweets) => (this.tweets = listaTweets));
   }
-
-  /*cantidadLikesTweet(){
-    let contarLikes = this.tweets.likes.length;
-    /*for(let i = 0; i < this.tweets.likes.length; i++){
-      this.tweets.likes.length;
-      if(this.tweets.likes[i]!=null){
-        contarLikes++;
-      }
-    }*/
-    //return contarLikes;
-
-  //}
 
 
 }

@@ -1,29 +1,27 @@
-  <mat-card class="custom-form" *ngFor="let tweet of tweets">
-    <mat-card-header>
-      <div mat-card-avatar><!--{{tweet.id}}--><img src="assets/logoTwitter.png"></div>
-      <mat-card-title>
-        <div class="size">{{tweet.user.username}}</div>
-      </mat-card-title>
-      <mat-card-subtitle>{{tweet.likes}}</mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content>
-      <p class="mensaje">{{tweet.mensaje}}</p>
-    </mat-card-content>
-    <mat-card-actions>
-      <div class="grupoIconos">
-        <i class="icono1 far fa-comment fa-lg"></i>
-        <i class="icono fas fa-retweet fa-lg"></i>
-        <i type="button" class="icono fas fa-heart fa-lg" *ngIf="darLike()" (click)="darLike(tweet.id)">
-          <span class="like">{{tweet.likes.length}}</span>
-        </i>
-        <i type="button" class="icono fas fa-heart fa-lg" *ngIf="!darLike()" style="color: red;" (click)="darLike(tweet.id)">
-          <span class="like">{{tweet.likes.length}}</span>
-        </i>
+<mat-card class="custom-form" *ngFor="let tweet of tweets">
+  <mat-card-header>
+    <div mat-card-avatar><!--{{tweet.id}}--><img src="assets/logoTwitter.png"></div>
+    <mat-card-title>
+      <div class="size">{{tweet.user.username}}</div>
+    </mat-card-title>
+    <!--<mat-card-subtitle>{{tweet.likes}}</mat-card-subtitle>-->
+  </mat-card-header>
+  <mat-card-content>
+    <p class="mensaje">{{tweet.mensaje}}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <div class="grupoIconos">
+      <i class="icono1 far fa-comment fa-lg"></i>
+      <i class="icono fas fa-retweet fa-lg"></i>
+      <i type="button" class="icono fas fa-heart fa-lg" (click)="darLike(tweet.id)">
+        <span class="like">{{tweet.likes.length}}</span>
+      </i>
 
-        <i class="icono fas fa-share-alt fa-lg"></i>
-      </div>
-      <!--<button mat-button (click)="darLike(tweet.id)">
-        {{tweet.id}} {{tweet.user.id}}</button>
-      <button mat-button>SHARE</button>-->
-    </mat-card-actions>
-  </mat-card>
+
+      <i class="icono fas fa-share-alt fa-lg"></i>
+    </div>
+    <!--<button mat-button (click)="darLike(tweet.id)">
+      {{tweet.id}} {{tweet.user.id}}</button>
+    <button mat-button>SHARE</button>-->
+  </mat-card-actions>
+</mat-card>
