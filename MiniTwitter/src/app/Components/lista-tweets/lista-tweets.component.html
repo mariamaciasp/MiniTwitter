@@ -1,67 +1,27 @@
-<mat-card></mat-card>
-<mat-card *ngFor="let tweet of tweets">
-  <mat-card-header>
-    <div mat-card-avatar class="example-header-image">{{tweet.id}}</div>
+  <mat-card class="custom-form" *ngFor="let tweet of tweets">
+    <mat-card-header>
+      <div mat-card-avatar><!--{{tweet.id}}--><img src="assets/logoTwitter.png"></div>
+      <mat-card-title>
+        <div class="size">{{tweet.user.username}}</div>
+      </mat-card-title>
+      <mat-card-subtitle>{{tweet.likes}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p class="mensaje">{{tweet.mensaje}}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <div class="grupoIconos">
+        <i class="icono1 far fa-comment fa-lg"></i>
+        <i class="icono fas fa-retweet fa-lg"></i>
+        <i type="button" class="icono fas fa-heart fa-lg" *ngIf="darLike()" (click)="darLike(tweet.id)">
+          <span class="like">{{tweet.likes.length}}</span>
+        </i>
 
-    <mat-card-title><div><!-- <img mat-card-image src={{tweet.user.photoUrl}}>-->
-      {{tweet.user.username}}</div></mat-card-title>
-    <mat-card-subtitle>{{tweet.likes}}</mat-card-subtitle>
-    <div></div>
-    <mat-card-subtitle></mat-card-subtitle>
-  </mat-card-header>
 
-  <mat-card-content>
-    <p> {{tweet.mensaje}}
-    </p>
-    <p>{{tweet.likes.length}}</p>
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-button (click)="darLike(tweet.id)">
-      {{tweet.id}} {{tweet.user.id}}</button>
-    <button mat-button>SHARE</button>
-  </mat-card-actions>
-</mat-card>
-<!--
-<mat-grid-list cols="9" rowHeight="100px">
-  <mat-grid-tile *ngFor="let columnas of columnsToDisplay" [colspan]="1" [rowspan]="1"><h3>
-    {{columnas}}</h3>
-  </mat-grid-tile>
-</mat-grid-list>
-
-<mat-grid-list cols="9" rowHeight="100px">
-
-  <div class="tablaPlanetas" *ngFor="let planetas of listadoPlanetas">
-
-    <mat-grid-tile [colspan]="1" [rowspan]="1" >
-      {{planetas.name}}
-    </mat-grid-tile>
-    <mat-grid-tile [colspan]="1" [rowspan]="1" >
-      {{planetas.rotation_period}}
-    </mat-grid-tile>
-    <mat-grid-tile [colspan]="1" [rowspan]="1" >
-      {{planetas.orbital_period}}
-    </mat-grid-tile>
-    <mat-grid-tile [colspan]="1" [rowspan]="1" >
-      {{planetas.diameter}}
-    </mat-grid-tile>
-    <mat-grid-tile [colspan]="1" [rowspan]="1" >
-      {{planetas.climate}}
-    </mat-grid-tile>
-    <mat-grid-tile [colspan]="1" [rowspan]="1" >
-      {{planetas.gravity}}
-    </mat-grid-tile>
-    <mat-grid-tile [colspan]="1" [rowspan]="1">
-      {{planetas.terrain}}
-    </mat-grid-tile>
-    <mat-grid-tile [colspan]="1" [rowspan]="1" >
-      {{planetas.surface_water}}
-    </mat-grid-tile>
-    <mat-grid-tile [colspan]="1" [rowspan]="1" >
-      {{planetas.population}}
-    </mat-grid-tile>
-
-  </div>
-
-</mat-grid-list>
--->
-
+        <i class="icono fas fa-share-alt fa-lg"></i>
+      </div>
+      <!--<button mat-button (click)="darLike(tweet.id)">
+        {{tweet.id}} {{tweet.user.id}}</button>
+      <button mat-button>SHARE</button>-->
+    </mat-card-actions>
+  </mat-card>

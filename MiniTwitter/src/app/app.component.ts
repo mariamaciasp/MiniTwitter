@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faTwitter } from '@fortawesome/free-brands-svg-icons';
+
+library.add(faTwitter);
 
 @Component({
   selector: 'app-root',
@@ -7,4 +11,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'MiniTwitter';
+  faTwitter = faTwitter;
+
 }
