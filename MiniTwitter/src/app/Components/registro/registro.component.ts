@@ -33,6 +33,7 @@ export class RegistroComponent implements OnInit {
         this.router.navigateByUrl('/login');
       }, error => {
         console.log(error);
+        alert("Error en la creación de usuario. Inténtelo de nuevo");
       }
     );
   }
