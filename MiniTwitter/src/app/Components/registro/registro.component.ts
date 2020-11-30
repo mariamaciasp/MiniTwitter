@@ -37,4 +37,8 @@ export class RegistroComponent implements OnInit {
     );
   }
 
+  /*logout() { // fataría hacerlo
+    localStorage.removeItem('currentUser');
+  }*/
+
 }

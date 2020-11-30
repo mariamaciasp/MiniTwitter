@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<div class="tweet">
+  <i class="fas fa-arrow-left fa-lg grupoIconos" [routerLink]="['/tweets']"></i>
+</div>
+<div class="registrar">
+    <form class="custom-form" method="post">
+        <h1>Nuevo Tweet</h1>
+        <input type="text" style="height: 80px;" [(ngModel)]="tweet.mensaje" required #sms="ngModel"name="mensaje" 
+            placeholder="Crear tweet..." required="required">
+        <div [hidden]="sms.valid || sms.pristine" class="alert alert-danger">
+            <p *ngIf="sms.errors?.required"> Tweet vacío</p>
+        </div>
+        <button type="submit" (click)="crearTweet()">Crear</button>
+    </form>
+</div>

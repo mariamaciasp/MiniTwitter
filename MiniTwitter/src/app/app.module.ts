@@ -22,6 +22,8 @@ import { TweetsService } from './Services/tweets.service';
 import { HeaderComponent } from './Components/header/header.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {MatGridListModule} from '@angular/material/grid-list';
+import { CrearTweetComponent } from './Components/crear-tweet/crear-tweet.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -30,7 +32,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     LoginComponent,
     RegistroComponent,
     ListaTweetsComponent,
-    HeaderComponent
+    HeaderComponent,
+    CrearTweetComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +46,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatToolbarModule,
     MatIconModule,
     FontAwesomeModule,
-    MatGridListModule
+    MatGridListModule, 
+    ReactiveFormsModule
 
   ],
   providers: [
