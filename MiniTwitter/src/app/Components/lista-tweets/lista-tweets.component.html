@@ -16,7 +16,9 @@
         <i type="button" class="icono fas fa-heart fa-lg" *ngIf="darLike()" (click)="darLike(tweet.id)">
           <span class="like">{{tweet.likes.length}}</span>
         </i>
-
+        <i type="button" class="icono fas fa-heart fa-lg" *ngIf="!darLike()" style="color: red;" (click)="darLike(tweet.id)">
+          <span class="like">{{tweet.likes.length}}</span>
+        </i>
 
         <i class="icono fas fa-share-alt fa-lg"></i>
       </div>
