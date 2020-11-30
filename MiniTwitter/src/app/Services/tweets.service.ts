@@ -45,6 +45,15 @@ export class TweetsService {
     );
   }
 
+  nuevoTweet(tweet: TweetDto): Observable<ListaTweets> {
+    const authURLNuevoTweet = 'https://www.minitwitter.com:3001/apiv1/tweets/create';
+    return this.http.post<ListaTweets>(
+      authURLNuevoTweet,
+      tweet,
+      httpOptions
+    );
+  }
+
   /*registro(usuarioRegistro: SingUpDto): Observable<SignUpResponse> {
     const authURLRegistro = 'https://www.minitwitter.com:3001/apiv1/auth/signup';
     return this.http.post<SignUpResponse>(

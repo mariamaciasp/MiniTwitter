@@ -23,6 +23,7 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
     //console.log(this.usuarioLogeado.id);
   }
+  
 
   login(){
     //const usuario ={email:this.email, password:this.password};
@@ -35,5 +36,6 @@ export class LoginComponent implements OnInit {
     //console.log(this.email);
     //console.log(this.password);
   }
+
 
 }

@@ -47,6 +47,6 @@ export class ListaTweetsComponent implements OnInit {
     });*/
       //(listaTweets: ListaTweets) => (this.tweets = listaTweets));
   }
-
+  
 
 }

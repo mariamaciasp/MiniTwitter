@@ -1,3 +1,7 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<div class="nuevoTweet">
+  <i class="fas fa-plus fa-lg grupoIconos" [routerLink]="['/tweets/new']"></i>
+</div>
 <mat-card class="custom-form" *ngFor="let tweet of tweets">
   <mat-card-header>
     <div mat-card-avatar><!--{{tweet.id}}--><img src="assets/logoTwitter.png"></div>
