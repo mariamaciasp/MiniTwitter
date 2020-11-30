@@ -3,6 +3,8 @@
     <h1>Iniciar sesión</h1>
     <input type="email" [(ngModel)]="usuario.email" #em="ngModel" name="email" placeholder="Email" [email]="true" required="required"/>
     <input type="password" [(ngModel)]="usuario.password" #pwd="ngModel" name="password" placeholder="Contraseña" required="required">
+    <a class="enlaceRegistro" [routerLink]="['/registro']">Regístrate</a>
+
     <button type="submit" (click)="login()">Log in</button>
   </form>
 </div>

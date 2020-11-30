@@ -30,6 +30,7 @@ export class ListaTweetsComponent implements OnInit {
   darLike(id: number) {
     this.servicioTweets.darLike(id).subscribe(resp => {
       console.log(resp);
+      window.location.reload();
     });;
     //this.tweets.likes.push();
     console.log("marcado favorito");
@@ -47,6 +48,6 @@ export class ListaTweetsComponent implements OnInit {
     });*/
       //(listaTweets: ListaTweets) => (this.tweets = listaTweets));
   }
-  
+
 
 }
