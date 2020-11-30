@@ -27,7 +27,7 @@
   font-size: 22px;
 }
 
-.icono {
+.icono, .iconoLike {
   margin-left: 120px;
 }
 
@@ -37,8 +37,9 @@
 }
 
 .like {
-  margin-left: 5px;
+  margin-left: 7px;
   font-weight: normal;
+  font-size: 18px;
 }
 
 i:hover {
@@ -49,4 +50,13 @@ img {
   width: 40px;
   margin-top: 10px;
   margin-right: 12px;
+}
+
+.iconoLike:hover {
+  color: rgb(241, 53, 53);
+}
+
+.like:hover{
+  color:	rgb(55, 55, 55);
+
 }
